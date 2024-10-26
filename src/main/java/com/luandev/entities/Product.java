@@ -1,12 +1,12 @@
 package com.luandev.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product {
     private String name;
     private double price;
-
-    public Product(String name){
-        this.name = name;
-    }
+    public Product(){}
 
     public Product(String name, double price) {
         this.name = name;
@@ -29,7 +29,10 @@ public class Product {
         this.price = price;
     }
 
-    @Override
+    public void priceTag(){
+        System.out.println(toString());
+    }
+
     public String toString() {
         return name +" "+ "$"+ " "+ price;
     }
